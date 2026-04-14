@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import FriendDetailClient from './FriendDetailClient';
+import FriendDetailClient from './FriendDetailPage';
 
 
 async function getFriend(id) {

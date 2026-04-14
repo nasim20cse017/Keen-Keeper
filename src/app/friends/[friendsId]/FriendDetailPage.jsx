@@ -15,7 +15,7 @@ import {
 } from "react-icons/hi2";
 import { useInteractions } from '@/Context/InteractionContext';
 
-const FriendDetailClient = ({ friend }) => {
+const FriendDetailPage = ({ friend }) => {
     const { addInteraction, timeline } = useInteractions();
 
     const handleCheckIn = (type) => {
@@ -154,4 +154,4 @@ const CheckInBtn = ({ icon, label, onClick }) => (
     </button>
 );
 
-export default FriendDetailClient;
+export default FriendDetailPage;
