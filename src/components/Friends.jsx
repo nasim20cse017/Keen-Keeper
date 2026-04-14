@@ -2,10 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const Friends = async () => {
+const Friends =  ({friendsData}) => {
 
-    const res = await fetch('http://localhost:3000/friends.json');
-    const friendsData = await res.json();
+    // const res = await fetch("http://localhost:3000/friends.json");
+    // const friendsData = await res.json();
     // Simple logic to calculate stats from the JSON
     const totalFriends = friendsData.length;
     const onTrackCount = friendsData.filter(f => f.status === "on-track").length;
