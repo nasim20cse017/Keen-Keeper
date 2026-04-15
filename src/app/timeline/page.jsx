@@ -27,14 +27,14 @@ const TimelinePage = () => {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-extrabold text-[#1e293b] mb-8">Timeline</h1>
 
-        <div className="flex flex-col md:flex-row gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row gap-4 mb-8">
           {/* Search */}
           <div className="relative flex-grow">
             <HiOutlineSearchCircle className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <input 
               type="text" 
               placeholder="Search by name..." 
-              className="input input-bordered w-full pl-10 bg-white"
+              className="input input-bordered  pl-5 bg-white"
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>

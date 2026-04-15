@@ -8,8 +8,7 @@ const Friends =  ({friendsData}) => {
     // const res = await fetch("http://localhost:3000/friends.json");
     // const friendsData = await res.json();
 
-      
-
+      const { timeline } = useInteractions();
 
 
     const totalFriends = friendsData.length;
@@ -25,7 +24,7 @@ const Friends =  ({friendsData}) => {
                     { label: "Total Friends", value: totalFriends },
                     { label: "On Track", value: onTrackCount },
                     { label: "Need Attention", value: needAttention },
-                    { label: "Interactions This Month", value: 12 }, 
+                    { label: "Interactions This Month", value: timeline.length }, 
                 ].map((stat, idx) => (
                     <div key={idx} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
                         <h2 className="text-3xl font-bold text-slate-800">{stat.value}</h2>
