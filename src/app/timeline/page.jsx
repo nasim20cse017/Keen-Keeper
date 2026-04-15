@@ -11,6 +11,8 @@ const TimelinePage = () => {
   const [search, setSearch] = useState('');
   const [sortOrder, setSortOrder] = useState('newest');
 
+
+
   const filteredTimeline = timeline
     .filter(item => (filter === 'All' || item.type === filter))
     .filter(item => item.person.toLowerCase().includes(search.toLowerCase()))
@@ -61,7 +63,10 @@ const TimelinePage = () => {
 
         {/* Entries */}
         <div className="space-y-3">
-          {filteredTimeline.map((item) => (
+          {filteredTimeline.length === 0 ? (
+            <p className="text-slate-400 text-xl text-center mt-30">No interactions logged yet.</p>
+          ) :
+          (filteredTimeline.map((item) => (
             <div key={item.id} className="bg-white border border-gray-100 rounded-xl p-4 flex items-center gap-5 shadow-sm">
               <div className="bg-[#f1f5f9] p-3 rounded-lg text-2xl text-slate-600">
                 {item.type === 'Call' ? <HiOutlinePhone /> : item.type === 'Video' ? <HiOutlineVideoCamera /> : <HiOutlineChatBubbleLeftEllipsis />}
@@ -71,7 +76,7 @@ const TimelinePage = () => {
                 <p className="text-xs text-slate-400 font-semibold">{item.date}</p>
               </div>
             </div>
-          ))}
+          )))}
         </div>
       </div>
     </div>

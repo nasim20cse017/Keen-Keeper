@@ -23,6 +23,8 @@ const FriendDetailPage = ({ friend }) => {
         toast.success(`${type} with ${friend.name}!`);
     };
 
+
+
     // Filter global timeline to show only interactions with THIS friend
     const friendSpecificTimeline = timeline.filter(t => t.person === friend.name);
 

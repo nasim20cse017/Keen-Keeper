@@ -7,6 +7,15 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 const StatsPage = () => {
   const { timeline } = useInteractions();
 
+  // If no interactions, show message
+  if (!timeline || timeline.length === 0) {
+    return (
+      <div className="min-h-screen flex justify-center bg-[#f8fafc]">
+        <p className="text-slate-400 text-xl text-center mt-30 ">No interactions logged yet.</p>
+      </div>
+    );
+  }
+
   // Calculate data for chart
   const dataMap = timeline.reduce((acc, curr) => {
     acc[curr.type] = (acc[curr.type] || 0) + 1;
@@ -47,7 +56,7 @@ const StatsPage = () => {
 
             {/* Custom Legend */}
             <div className="flex gap-6 mt-6">
-              {data.map((entry) => (
+              { data.map((entry) => (
                 <div key={entry.name} className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full" style={{ backgroundColor: entry.color }}></div>
                   <span className="text-xs font-medium text-slate-500">{entry.name}</span>
