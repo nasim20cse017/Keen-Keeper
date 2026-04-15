@@ -39,10 +39,10 @@ const TimelinePage = () => {
 
           {/* Filter */}
           <select 
-            className="select select-bordered bg-white"
+            className="select select-bordered bg-white" defaultValue=""
             onChange={(e) => setFilter(e.target.value)}
           >
-            <option value="All">Filter timeline</option>
+            <option disabled value="">Filter timeline</option>
             <option value="All">All types</option>
             <option value="Call">Calls</option>
             <option value="Text">Texts</option>

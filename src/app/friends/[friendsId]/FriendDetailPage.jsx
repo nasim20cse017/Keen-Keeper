@@ -20,7 +20,7 @@ const FriendDetailPage = ({ friend }) => {
 
     const handleCheckIn = (type) => {
         addInteraction(type, friend.name);
-        toast.success(`${type} recorded with ${friend.name}!`);
+        toast.success(`${type} with ${friend.name}!`);
     };
 
     // Filter global timeline to show only interactions with THIS friend
@@ -28,7 +28,7 @@ const FriendDetailPage = ({ friend }) => {
 
     return (
         <div className="min-h-screen bg-[#f8fafc] p-4 md:p-10">
-            <ToastContainer position="bottom-right" />
+            <ToastContainer position="top-right" />
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                 {/* --- LEFT COLUMN --- */}
