@@ -1,6 +1,6 @@
 # 🍃 KeenKeeper
 
-**KeenKeeper** is a personal relationship management tool designed to help you nurture and maintain meaningful connections with friends, family, and colleagues.
+**KeenKeeper** is a personal relationship management tool designed to help you nuture and maintain meaningful connections with friends, family, and colleagues.
 
 ### 🚀 Description
 Never lose track of the people who matter. KeenKeeper allows you to set relationship goals, track your last interactions, and view analytics on how you communicate.
