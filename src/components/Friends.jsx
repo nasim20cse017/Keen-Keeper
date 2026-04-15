@@ -1,12 +1,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useInteractions } from "@/Context/InteractionContext";
 
 const Friends =  ({friendsData}) => {
 
     // const res = await fetch("http://localhost:3000/friends.json");
     // const friendsData = await res.json();
-    
+
+      
+
+
+
     const totalFriends = friendsData.length;
     const onTrackCount = friendsData.filter(f => f.status === "on-track").length;
     const needAttention = friendsData.filter(f => f.status !== "on-track").length;
