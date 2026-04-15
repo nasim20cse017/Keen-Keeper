@@ -61,7 +61,7 @@ const FriendDetailPage = ({ friend }) => {
                         </div>
 
                         <p className="mt-6 text-slate-500 italic text-sm">{friend.bio}</p>
-                        <p className="text-xs text-slate-400 mt-2">Preferred: {friend.email.split('@')[0]}</p>
+                        <p className="text-xs text-slate-400 mt-2">Preferred: {friend.email}</p>
                     </div>
 
                     <div className="space-y-3">
