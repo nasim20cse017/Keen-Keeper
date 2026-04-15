@@ -8,7 +8,7 @@ export const InteractionProvider = ({ children }) => {
     const [friends, setFriends] = useState([]);
     const [timeline, setTimeline] = useState([]);
 
-    // Load friends.json dynamically on mount
+    // Load friends.json dynamically 
     useEffect(() => {
         fetch('/friends.json')
             .then(res => res.json())
